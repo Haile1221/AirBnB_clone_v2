@@ -1,0 +1,41 @@
+import json
+from datetime import datetime
+
+# Function to generate ISO formatted datetime string
+def current_timestamp():
+    return datetime.now().isoformat()
+
+# Sample data with additional entries
+data = {
+    "BaseModel.4b542826-724f-4e1f-9141-04b0338b5a46": {
+        "id": "4b542826-724f-4e1f-9141-04b0338b5a46",
+        "created_at": current_timestamp(),
+        "updated_at": current_timestamp(),
+        "__class__": "BaseModel"
+    },
+    "BaseModel.9760e8f5-c70a-4ddb-a476-5e89192ecb5f": {
+        "id": "9760e8f5-c70a-4ddb-a476-5e89192ecb5f",
+        "created_at": current_timestamp(),
+        "updated_at": current_timestamp(),
+        "__class__": "BaseModel"
+    },
+    "User.16957d2f-e309-4f6c-a0da-eebe5be4b77a": {
+        "id": "16957d2f-e309-4f6c-a0da-eebe5be4b77a",
+        "created_at": current_timestamp(),
+        "updated_at": current_timestamp(),
+        "__class__": "User"
+    },
+    # Add more entries as needed
+    "User.haile-zerfu": {
+        "computer_name": "Haile Zerfu",
+        "email": "hzerfu10@gmail.com",
+        "created_at": current_timestamp(),
+        "updated_at": current_timestamp(),
+        "__class__": "User"
+    }
+}
+
+# Write data to JSON file
+with open('file.json', 'w') as f:
+    json.dump(data, f, indent=4)  # indent for pretty formatting (optional)
+
