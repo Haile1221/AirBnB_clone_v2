@@ -1,1 +1,1 @@
-this is flask project
+templates
